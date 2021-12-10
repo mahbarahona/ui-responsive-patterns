@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostly fluid pattern</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(0,0,0,0.1);
+        }
+        main{
+            display: -webkit-flex;
+            display: flex;
+
+            -webkit-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+            width: 100%;  
+            height: 100vh;
+
+        }
+        main section{
+            min-height: 150px;
+            width: 100%;
+        }
+        .section1{
+            background-color: #4C3F91;
+        }
+        .section2{
+            background-color: #9145B6;
+        }
+        .section3{
+            background-color: #B958A5;
+        }
+        .section4{
+            background-color: #FF5677;
+        }
+        .section5{
+            background-color: royalblue;
+        }
+
+        @media (min-width:600px){
+            .section2, .section3, .section4, .section5{
+                width: 50%;
+            }
+        }
+        @media (min-width:800px){
+            .section1 {
+                width: 60%;
+            }
+            .section2 {
+                width: 40%;
+            }
+            .section3, .section4 {
+                width: 33%;
+            }
+            .section5 {
+                width: 34%;
+            }
+        }
+        @media (min-width:800px){
+            main{
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="section1"></section>
+        <section class="section2"></section>
+        <section class="section3"></section>
+        <section class="section4"></section>
+        <section class="section5"></section>       
+    </main>
+</body>
+</html>
